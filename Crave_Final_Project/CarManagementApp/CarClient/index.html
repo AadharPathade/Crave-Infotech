@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Car Management System</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="navbar-left">
+            <h1>Motor</h1>
+        </div>
+        <div class="navbar-right">
+            <ul>
+                <li><a href="#Home" onclick="showOption('showHome')">Home</a></li>
+                <li><a href="#ShowCars" onclick="showOption('showCars') , showCar()">Show Cars</a></li>
+                <li><a href="#AddCar" onclick="showOption('addCar')">Add Car</a></li>
+                <li><a href="#UpdateCar" onclick="showOption('updateCar')">Update Car</a></li>
+                <li><a href="#DeleteCar" onclick="showOption('deleteCar')">Delete Car</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="showHome" class="options">
+        <div class="main-content">
+            <div class="background-image">
+                <h1>MAKE YOUR CAR MANAGEMENT EXPERIENCE MORE EXCITING </h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="showCars" class="options" style="display: none;">
+        <div id="insideShowCar">
+            <table id="carTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Model</th>
+                        <th>Color</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="carTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="addCar" class="options" style="display: none;">
+        <div id="insideAddCar">
+            <label for="carId">ID</label>
+            <input type="number" placeholder="Enter ID" id="carId">
+            <label for="Model">Model</label>
+            <input type="text" placeholder="Enter Model" id="Model">
+            <label for="Color">Color</label>
+            <input type="text" placeholder="Enter Color" id="Color">
+            <label for="Price">Price</label>
+            <input type="number" placeholder="Enter Price" id="Price">
+            <button onclick="addCar()">ADD</button>
+            <div id="showAddedCar">
+            </div>
+        </div>
+    </div>
+
+    <div id="updateCar" class="options" style="display: none;">
+        <div id="insideUpdateCar">
+            <label for="updateId">ID</label>
+            <input type="number" placeholder="Enter ID" id="updateId">
+            <label for="updateModel">Update Model</label>
+            <input type="text" placeholder="Enter Model" id="updateModel">
+            <label for="updateColor">Update Color</label>
+            <input type="text" placeholder="Enter Color" id="updateColor">
+            <label for="updatePrice">Update Price</label>
+            <input type="number" placeholder="Enter Price" id="updatePrice">
+            <button onclick="updateCar()">UPDATE</button>
+            <div id="showUpdatedCar">
+            </div>
+        </div>
+    </div>
+
+    <div id="deleteCar" class="options" style="display: none;">
+        <div id="insideDeleteCar">
+            <label for="deleteId">ID</label>
+            <input type="number" placeholder="Enter ID" id="deleteId">
+            <button onclick="deleteCar()">DELETE</button>
+            <div id="showDeletedCar">
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,326 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 10px;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.navbar-left h1 {
+    margin: 0;
+    padding: 10px 10px;
+    margin: 10px 10px;
+}
+
+.navbar-right ul {
+    list-style: none;
+    padding: 10px 10px;
+    margin: 10px 10px;
+}
+
+.navbar-right li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.navbar-right li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.navbar-right li a:hover {
+    background-color: #555;
+}
+
+.main-content {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+}
+
+.background-image {
+    background-image: url("assets/car_ui_2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-image h1 {
+    font-size: 30px;
+    width: 50%;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 40px;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid white;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: large;
+}
+
+table th {
+    border: 2px solid white;
+    padding: 8px;
+    text-align: left;
+}
+
+table td {
+    border: 2px solid white;
+    padding: 8px;
+    text-align: left;
+}
+
+#showCars,
+#addCar,
+#updateCar,
+#deleteCar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#insideShowCar,
+#insideAddCar,
+#insideUpdateCar,
+#insideDeleteCar {
+    background-image: url("assets/beautiful-sky-with-clouds_58702-1459\ -\ Copy.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input:focus {
+    outline: none;
+}
+
+#addCar {
+    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#insideAddCar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+#insideAddCar label {
+    margin: 5px 0;
+}
+
+#insideAddCar input {
+    margin: 5px 0;
+    padding: 10px 30px;
+}
+
+#insideAddCar button {
+    margin-top: 15px;
+    padding: 5px 30px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#insideAddCar button:hover {
+    background-color: #555;
+}
+
+#showAddedCar {
+    margin-top: 15px;
+}
+
+#updateCar {
+    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#insideUpdateCar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+#insideUpdateCar label {
+    margin: 5px 0;
+}
+
+#insideUpdateCar input {
+    margin: 5px 0;
+    padding: 10px 30px;
+}
+
+#insideUpdateCar button {
+    margin-top: 15px;
+    padding: 5px 30px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#insideUpdateCar button:hover {
+    background-color: #555;
+}
+
+#showUpdatedCar {
+    margin-top: 15px;
+}
+
+#deleteCar {
+    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#insideDeleteCar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+
+#insideDeleteCar label {
+    margin: 5px 0;
+}
+
+#insideDeleteCar input {
+    margin: 5px 0;
+    padding: 10px 30px;
+}
+
+
+#showDeletedCar {
+    margin-top: 15px;
+}
+
+#insideDeleteCar button {
+    margin-top: 15px;
+    padding: 5px 30px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#insideDeleteCar button:hover {
+    background-color: #555;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .navbar-right ul {
+        display: none;
+    }
+
+    .navbar-right li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .nav-toggle {
+        display: inline-block;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+    .navbar-right.show {
+        display: block;
+    }
+
+    .background-image h1 {
+        font-size: 24px;
+        width: 80%;
+        top: 30%;
+        margin-top: 20px;
+    }
+
+    @media only screen and (max-width: 480px) {
+        .background-image h1 {
+            font-size: 20px;
+            width: 90%;
+            top: 35%;
+            margin-top: 10px;
+        }
+
+        .navbar-left h1,
+        .navbar-right ul {
+            font-size: 14px;
+        }
+
+        .navbar-right li a {
+            padding: 15px 20px;
+        }
+    }
+}
